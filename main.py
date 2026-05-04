@@ -1,3 +1,5 @@
+import sqlite3
+import hashlib
 
 # --- LÍNEA 38: EL UMBRAL DE SEGURIDAD SOBERANA ---
 if __name__ == "__main__":
@@ -25,6 +27,5 @@ if __name__ == "__main__":
     except:
         print(f"🔑 ACCESO: Bienvenido de nuevo, {user}.")
 
-    # 3. Activación de Motores (Banco Mundial y GitHub)
-    activar_motores() 
     print("\n🏆 SISTEMA OPERATIVO Y SOBERANO")
+    
