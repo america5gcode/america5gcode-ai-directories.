@@ -8,9 +8,9 @@ if __name__ == "__main__":
                     usuario TEXT UNIQUE, password TEXT)''')
     conn.close()
 
-    print("\n--- 🔐 REGISTRO GENERAL: TERMINAL X ---")
-    user = input("Nombre de Usuario: ")
-    pw = input("Contraseña: ")
+    print("\n--- REGISTRO GENERAL ---")
+    user = input("User: ")
+    pw = input("Pass: ")
     pw_hash = hashlib.sha256(pw.encode()).hexdigest()
     
     try:
@@ -18,8 +18,8 @@ if __name__ == "__main__":
         conn.execute("INSERT INTO usuarios_red (usuario, password) VALUES (?, ?)", (user, pw_hash))
         conn.commit()
         conn.close()
-        print(f"🚀 REGISTRO EXITOSO: Bienvenido a la Red, {user}.")
+        print(f"WELCOME, {user}.")
     except:
-        print(f"🔑 ACCESO: Bienvenido de nuevo, {user}.")
+        print(f"ACCESS: {user}.")
 
-    print("\n🏆 SISTEMA OPERATIVO Y SOBERANO
+    print("\nSYSTEM OPERATIONAL")
