@@ -28,4 +28,3 @@ if __name__ == "__main__":
         print(f"🔑 ACCESO: Bienvenido de nuevo, {user}.")
 
     print("\n🏆 SISTEMA OPERATIVO Y SOBERANO")
-    
