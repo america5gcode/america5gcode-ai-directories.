@@ -61,6 +61,62 @@ if __name__ == "__main__":
         # Manejo para entornos sin input interactivo (como algunos logs de Render)
         print("\nSISTEMA ESPERANDO CONEXIÓN REMOTA...")
 
+import streamlit as st
+import sys
+
+# --- TERMINAL X: GRAPHICAL INTERFACE CONFIGURATION ---
+st.set_page_config(
+    page_title="Terminal X | Phelps Tucker Group",
+    page_icon="🌐",
+    layout="centered"
+)
+
+def main():
+    # HEADER - THE SKYSCRAPER ENTRANCE
+    st.title("🌐 TERMINAL X: THE DIGITAL SKYSCRAPER")
+    st.subheader("Official Operating System - Phelps Tucker Group")
+    st.write("---")
+    
+    # SECURITY CUSTOMS (ADUANA DE SEGURIDAD)
+    st.markdown("### 🛡️ SECURITY CUSTOMS & ETHICAL PROTOCOL")
+    st.info("NOTICE: All users must be linked to the Artificial Intelligence Industry.")
+    st.warning("STRICT PROHIBITION: Malicious, obscene, or adult-rated (X) content.")
+
+    # USER PROFILE INPUTS
+    with st.form("ai_registration_form"):
+        company_name = st.text_input("📝 AI Company or Project Name:")
+        ai_specialty = st.text_input("📝 AI Industry Specialty (e.g., NLP, Sales Intelligence, ML):")
+        project_intent = st.text_area("📝 Brief description of your AI operations:")
+        
+        submit_button = st.form_submit_button("VALIDATE PROFILE")
+
+    if submit_button:
+        if not company_name or not ai_specialty or not project_intent:
+            st.error("⚠️ All fields are mandatory for international validation.")
+        else:
+            # THE SENTINEL: PURITY FILTER
+            # This filter blocks malicious or inappropriate terms automatically
+            blacklist = ["porno", "xxx", "obsceno", "malware", "virus", "sex", "pornographic"]
+            content_to_check = (company_name + ai_specialty + project_intent).lower()
+            
+            if any(term in content_to_check for term in blacklist):
+                st.error("❌ CRITICAL ERROR: ETHICAL VIOLATION DETECTED.")
+                st.error("🛡️ THE SENTINEL HAS TERMINATED THIS CONNECTION.")
+                # Ethical block simulated by stopping execution for the user
+            else:
+                st.success("✅ PROFILE OFFICIALLY VALIDATED BY PHELPS TUCKER GROUP")
+                st.balloons()
+                st.markdown(f"### 🚀 Welcome, {company_name}!")
+                st.write(f"Your project in **{ai_specialty}** is now integrated into the Terminal X Sovereign Network.")
+                
+                # ACCESS TO DATA (MINA DE ORO PREVIEW)
+                st.write("---")
+                st.markdown("#### ⛏️ GOLD MINE STATUS: ACTIVE")
+                st.success("International data flows (IBRD & Latin America) are now synchronized.")
+
+if __name__ == "__main__":
+    main()
+
 # =========================================================
 # FINAL DEL DOCUMENTO SOBERANO
 # =========================================================
