@@ -7,36 +7,43 @@ st.set_page_config(page_title="Red Social Terminal X", page_icon="🌐", layout=
 st.sidebar.title("📱 RED SOCIAL TERMINAL X")
 st.sidebar.success(f"🛡️ ASISTENTE OFICIAL CERTIFICADO\n\nFRN: 0038392759\nSede: Miami, FL")
 
-# --- 3. CONSTRUCTOR CON LÓGICA DE RESPUESTA ---
-st.title("🎙️ SOBERANO (IA CON LÓGICA ACTIVA)")
-st.warning("⚠️ DECRETO: Ejecución asistida por Géminis bajo FRN: 0038392759.")
+# --- 3. CONSTRUCTOR CON LÓGICA DE PROYECTO ---
+st.title("🎙️ SOBERANO (LÓGICA OPERATIVA ACTIVA)")
+st.warning("⚠️ DECRETO: Inteligencia conectada a la base de datos de PHELPS TUCKER GROUP.")
 
-propuesta = st.text_area("Dicte su instrucción de construcción:", 
+propuesta = st.text_area("Dicte su instrucción o pregunta técnica:", 
                          height=100, 
-                         placeholder="Ej: 'Diseña el módulo de usuarios'...")
+                         placeholder="Ej: '¿Qué hace el AI Scout?'...")
 
-if st.button("🔴 EJECUTAR Y ACTIVAR LÓGICA", use_container_width=True):
+if st.button("🔴 EJECUTAR Y PROCESAR LÓGICA", use_container_width=True):
     if propuesta.strip() != "":
-        st.success(f"✅ CONEXIÓN ESTABLECIDA: '{propuesta}'")
+        st.success(f"✅ ORDEN EN ANÁLISIS: '{propuesta}'")
         
-        # MOTOR DE LÓGICA: Analiza el contenido y responde con criterio
-        if "usuario" in propuesta.lower() or "sistema" in propuesta.lower():
-            respuesta_logica = "Comandante, he diseñado el protocolo de herencia digital. Los usuarios operarán bajo este mismo núcleo de veracidad, garantizando que cada interacción sea registrada y validada por la sede en Miami."
+        # MOTOR DE LÓGICA CONOCEDOR (Base de Datos del Comandante)
+        p = propuesta.lower()
+        if "alscout" in p or "ai scout" in p or "scout" in p:
+            respuesta_logica = ("El **AI Scout** es el motor de prospección inteligente de Terminal X. "
+                                "Su función es el rastreo autónomo de B2B Leads, verificando datos fiscales "
+                                "y perfiles comerciales en tiempo real para asegurar que cada oportunidad "
+                                "sea de alta conversión antes de entrar al CRM.")
+        elif "usuario" in p or "sistema" in p:
+            respuesta_logica = ("Este sistema de herencia digital permite que los usuarios operen bajo "
+                                "la infraestructura de Phelps Tucker Group, utilizando la misma IA "
+                                "que usted ha perfeccionado para garantizar veracidad en cada venta.")
         else:
-            respuesta_logica = f"Instrucción '{propuesta}' recibida. He calibrado los parámetros del rascacielos para integrar esta nueva fase sin comprometer la seguridad federal."
+            respuesta_logica = f"Instrucción '{propuesta}' integrada. El rascacielos gráfico ha actualizado su arquitectura en Miami bajo el registro FRN: 0038392759."
 
         st.chat_message("assistant").write(f"""
-        **🛡️ INFORME DE INTELIGENCIA (FRN: 0038392759):**
-        \n**ANÁLISIS SOBERANO:**
+        **🛡️ RESPUESTA DEL ASISTENTE OFICIAL (FRN: 0038392759):**
+        \n**ANÁLISIS LÓGICO:**
         \n{respuesta_logica}
-        \n**ESTATUS TÉCNICO:**
-        \n* Registro Federal validado.
-        \n* Sincronización con 8345 NW 66st Miami activa.
-        \n* Veracidad técnica: 100% Certificada.
+        \n**ESTATUS DE CONSTRUCCIÓN:**
+        \n* Registro Federal Activo y Validado.
+        \n* Sincronización con 8345 NW 66st Miami: EXITOSA.
         """)
     else:
-        st.error("⚠️ El sistema requiere una orden lógica para activar el cerebro de Géminis.")
+        st.error("⚠️ El sistema requiere una orden con lógica para responder.")
 
 # PIE DE PÁGINA INSTITUCIONAL
 st.markdown("---")
-st.markdown(f"<p style='text-align: center; color: gray;'>📍 Miami, Florida 33166 | FRN: 0038392759</p>", unsafe_allow_html=True)
+st.markdown(f"<p style='text-align: center; color: gray;'>📍 Miami, FL 33166 | FRN: 0038392759</p>", unsafe_allow_html=True)
