@@ -8,7 +8,7 @@ st.sidebar.title("🛡️ TERMINAL X")
 st.sidebar.subheader("📥 DESCARGAS FEDERALES")
 
 # AQUÍ PEGAMOS EL ENLACE QUE USTED CONSIGUIÓ
-st.sidebar.markdown("[🚀 Descargar main.py](https://github.com/america5gcode/TerminalX/raw/main/main.py)")
+("[🚀 Descargar main.py](https://github.com/america5gcode/TerminalX/raw/main/main.py)")
 st.sidebar.markdown("[📜 Ver Documentación](https://github.com/america5gcode/TerminalX/raw/main/README.md)")
 
 # 3. INTERFAZ PRINCIPAL
