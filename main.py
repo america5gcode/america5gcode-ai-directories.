@@ -19,7 +19,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🌐 PÁGINAS DEL IMPERIO")
 # Aquí coloca los enlaces directos a sus otras webs
 st.sidebar.markdown("[🏢 Directorio AI](https://america5gcode-ai-directories-67bv.onrender.com)")
-
+st.sidebar.markdown("[🏢 Directorio AI](https://america5gcode-ai-directories.onrender.com)")
 # 3. INTERFAZ PRINCIPAL
 st.title("🏙️ RED SOCIAL TERMINAL X")
 st.warning("⚠️ DECRETO: Distribución de activos autorizada bajo FRN: 0038392759")
