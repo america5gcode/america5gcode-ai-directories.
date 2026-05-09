@@ -1,4 +1,4 @@
-import streamlit as st
+deimport streamlit as st
 
 # 1. IDENTIDAD FEDERAL MIAMI ---
 st.set_page_config(page_title="Terminal X - Red Social", layout="wide")
