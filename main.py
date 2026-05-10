@@ -25,3 +25,52 @@ with st.expander("⚙️ JIRA: La Sala de Ingeniería Pesada"):
 with st.expander("🏢 MS PROJECT: Central de Planificación Estructural"):
     st.write("Cálculo de camino crítico y gestión de presupuestos de alta fidelidad.")
     st.markdown("[🔗 Abrir MS Project](https://productivity.directory/microsoft-project)")
+    import streamlit as st
+
+# --- PÁGINA 1620: IDENTIDAD OPERATIVA ---
+st.markdown("## 📟 PÁGINA 1620: MANIFIESTO DE PODER")
+st.divider()
+
+# SECCIÓN 1: ¿QUIÉNES SOMOS? (La Esencia)
+with st.container():
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.subheader("🛠️ Somos lo que hacemos")
+    with col2:
+        st.write("""
+        Somos arquitectos de soluciones móviles de alta complejidad. 
+        Operamos desde el núcleo del sistema (**Android/Termux**), transformando 
+        líneas de código en activos estratégicos. Nuestra identidad es la **Ejecución Pura**: 
+        si no se puede medir, rastrear y automatizar, no existe en nuestro imperio.
+        """)
+
+# SECCIÓN 2: NUESTRAS OFERTAS (El Valor del Rascacielos)
+st.markdown("### 💼 Portafolio de Soluciones Estratégicas")
+
+tab1, tab2, tab3 = st.tabs(["🚀 Terminal X", "📊 Inteligencia CRM", "🏗️ Infraestructura"])
+
+with tab1:
+    st.markdown("""
+    **Red Social de Prospección Avanzada**
+    * Automatización de investigación de mercado.
+    * Calificación de leads mediante IA propietaria.
+    * Despliegue en entornos de alta disponibilidad.
+    """)
+
+with tab2:
+    st.markdown("""
+    **Sincronización Transversal (Zoho/HubSpot)**
+    * Migración de bases de datos desde GitHub/Termux.
+    * Limpieza y enriquecimiento de lead data.
+    * Auditoría de métricas bajo registro federal.
+    """)
+
+with tab3:
+    st.markdown("""
+    **Gestión de Capital e Infraestructura**
+    * Administración de inversión de grado corporativo ($200k+).
+    * Planificación de ruta crítica y mitigación de riesgos.
+    * Reportes de transparencia para socios estratégicos.
+    """)
+
+st.divider()
