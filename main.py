@@ -1,41 +1,81 @@
 import streamlit as st
 
-# 1. IDENTIDAD FEDERAL MIAMI ---
-st.set_page_config(page_title="Terminal X - Red Social", layout="wide")
+# Título de la Plataforma de Mando
+st.title("🏗️ Rascacielos Gráfico: Centro de Operaciones FRN-0038392759")
 
-# 2. MENÚ LATERAL CON ENLACES SOBERANOS
-st.sidebar.title("🛡️ RED SOCIAL TERMINAL X")
-st.sidebar.success("✅ REGISTRO FEDERAL: 0038392759")
+# --- BLOQUE DE LAS ÚLTIMAS ESTACIONES ---
 
-st.sidebar.markdown("---")
-st.sidebar.subheader("📥 DESCARGAS SOBERANAS")
+# 18. ROUTINE
+with st.expander("⚡ ROUTINE: El Nexo Inteligente de Ejecución"):
+    st.write("Centro de operaciones para captura rápida de ideas y organización automática de rituales diarios.")
+    st.markdown("[🔗 Abrir Routine](https://productivity.directory/routine)")
 
-# Enlaces de archivos
-st.sidebar.markdown("[🚀 Descargar main.py](https://github.com/america5gcode/TerminalX/raw/main/main.py)")
-st.sidebar.markdown("[📜 Ver Documentación](https://github.com/america5gcode/TerminalX/raw/main/README.md)")
-st.sidebar.markdown("[📦 Librerías Necesarias](https://github.com/america5gcode/TerminalX/raw/main/requirements.txt)")
+# 19. NOTEPLAN
+with st.expander("📝 NOTEPLAN: La Bitácora de Ingeniería"):
+    st.write("Unión de notas diarias, tareas y calendario en Markdown. Memoria técnica del proyecto.")
+    st.markdown("[🔗 Abrir NotePlan](https://productivity.directory/noteplan)")
 
-st.sidebar.markdown("---")
-st.sidebar.subheader("🌐 PÁGINAS DEL IMPERIO")
-# Aquí coloca los enlaces directos a sus otras webs
-st.sidebar.markdown("[🏢 Directorio AI](https://america5gcode-ai-directories-67bv.onrender.com)")
-st.sidebar.markdown("[🏢 Directorio AI](https://america5gcode-ai-directories.onrender.com)")
-# 3. INTERFAZ PRINCIPAL
-st.title("🏙️ RED SOCIAL TERMINAL X")
-st.warning("⚠️ DECRETO: Distribución de activos autorizada bajo FRN: 0038392759")
+# 20. TASKWARRIOR
+with st.expander("💻 TASKWARRIOR: El Núcleo de la Terminal"):
+    st.write("Gestión de tareas pura desde CLI. Máxima potencia para entornos Android/Termux.")
+    st.markdown("[🔗 Abrir Taskwarrior](https://productivity.directory/taskwarrior)")
 
-propuesta = st.text_area("Dicte su instrucción (ej: 'Dame los enlaces'):")
+# 21. JIRA
+with st.expander("⚙️ JIRA: La Sala de Ingeniería Pesada"):
+    st.write("Estándar industrial para desarrollo ágil, gestión de bugs y sprints técnicos.")
+    st.markdown("[🔗 Abrir Jira](https://productivity.directory/jira)")
 
-if st.button("🔴 EJECUTAR Y OBTENER ACCESOS"):
-    if propuesta.strip() != "":
-        st.markdown("---")
-        with st.chat_message("assistant"):
-            st.write("**🛡️ INFORME DE DISTRIBUCIÓN FEDERAL**")
-            if "enlace" in propuesta.lower() or "acceso" in propuesta.lower():
-                st.info("✅ **ACCESOS CONCEDIDOS POR EL COMANDANTE**")
-                st.write("- **Repositorio:** https://github.com/america5gcode/TerminalX")
-                st.success("La veracidad es arquitectura: El rascacielos es real.")
-            else:
-                st.write(f"Instrucción '{propuesta}' procesada. Todo está normal.")
-    else:
-        st.error("⚠️ El núcleo requiere una instrucción para operar.")
+# 22. MICROSOFT PROJECT
+with st.expander("🏢 MS PROJECT: Central de Planificación Estructural"):
+    st.write("Cálculo de camino crítico y gestión de presupuestos de alta fidelidad.")
+    st.markdown("[🔗 Abrir MS Project](https://productivity.directory/microsoft-project)")
+
+# 23. PROOFHUB
+with st.expander("⚖️ PROOFHUB: Centro de Aprobación y Control"):
+    st.write("Revisión visual de diseños y auditoría de documentos legales del registro federal.")
+    st.markdown("[🔗 Abrir ProofHub](https://productivity.directory/proofhub)")
+
+# 24. GANTTPRO
+with st.expander("📊 GANTTPRO: La Refinería de Cronogramas"):
+    st.write("Visualización de dependencias y planificación visual para inversores externos.")
+    st.markdown("[🔗 Abrir GanttPRO](https://productivity.directory/ganttpro)")
+
+# 25. NTASK
+with st.expander("🔗 NTASK: El Nexo de Ejecución Multi-Dimensional"):
+    st.write("Gestión de riesgos, tiempos y reuniones en una sola interfaz blindada.")
+    st.markdown("[🔗 Abrir nTask](https://productivity.directory/ntask)")
+
+# 26. FUSEBASE
+with st.expander("🏛️ FUSEBASE: El Portal de Transparencia del Imperio"):
+    st.write("Portales de marca blanca para mostrar avances a socios y base de conocimiento.")
+    st.markdown("[🔗 Abrir FuseBase](https://productivity.directory/fusebase)")
+
+# 27. PAYMO
+with st.expander("💸 PAYMO: La Central de Rentabilidad y Monitoreo"):
+    st.write("Control financiero, facturación y seguimiento de tiempo automático.")
+    st.markdown("[🔗 Abrir Paymo](https://productivity.directory/paymo)")
+
+# 28. HUBSTAFF
+with st.expander("📡 HUBSTAFF: El Radar de Despliegue"):
+    st.write("Monitoreo de actividad, GPS y geofencing para logística en tiempo real.")
+    st.markdown("[🔗 Abrir Hubstaff](https://productivity.directory/hubstaff)")
+
+# 29. LINEAR
+with st.expander("🚀 LINEAR: El Acelerador de Sprints"):
+    st.write("Gestión de issues y roadmaps con velocidad de respuesta de milisegundos.")
+    st.markdown("[🔗 Abrir Linear](https://productivity.directory/linear)")
+
+# 30. SMARTSHEET
+with st.expander("📊 SMARTSHEET: El Tablero de Control Maestro"):
+    st.write("Automatización de flujos lógicos y bases de datos relacionales.")
+    st.markdown("[🔗 Abrir Smartsheet](https://productivity.directory/smartsheet)")
+
+# 31. WRIKE
+with st.expander("🏢 WRIKE: Sincronizador Transversal"):
+    st.write("Unificación de ingeniería, marketing y legal en un solo organismo operativo.")
+    st.markdown("[🔗 Abrir Wrike](https://productivity.directory/wrike)")
+
+# 32. BASECAMP
+with st.expander("⛺ BASECAMP: La Fortaleza de la Comunicación"):
+    st.write("Búnker de colaboración integral libre de distracciones y ruido digital.")
+    st.markdown("[🔗 Abrir Basecamp](https://productivity.directory/basecamp)")
