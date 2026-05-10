@@ -1,42 +1,84 @@
 import streamlit as st
 
-# Configuración de la página (Título en la pestaña del navegador)
-st.set_page_config(page_title="Terminal X - Centro de Mando", layout="wide")
+# 1. IDENTIDAD FEDERAL Y CONTACTO DIRECTO
+st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# Cabecera del Imperio
-st.header("🏗️ RASCACIELOS GRÁFICO: DIRECTORIO DE POTENCIA")
-st.subheader("Registro Federal: FRN-0038392759")
+st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
+st.markdown("### **PHELPS TUCKER GROUP LLC**")
 
-st.info("Comandante: Gestión de infraestructura, logística y capital de inversión.")
+# Bloque de Información Crítica
+st.markdown(f"""
+<div style="background-color: #161b22; padding: 20px; border-radius: 10px; border-left: 5px solid #238636; color: white;">
+    <p>📍 <strong>DIRECCIÓN SEDE MIAMI:</strong> 8345 NW 66st Miami, Florida, USA 33166</p>
+    <p>📧 <strong>CORREO ELECTRÓNICO:</strong> fccinternationalus@gmail.com</p>
+    <p>📜 <strong>REGISTRO FEDERAL:</strong> FRN-0038392759 | <strong>ESTATUS:</strong> ACTIVO</p>
+</div>
+""", unsafe_allow_html=True)
 
-# --- SECCIÓN: EL ASADO DE ESTACIONES (18-32) ---
-st.markdown("### 🛰️ Estaciones de Control de Proyectos")
-
-# Diccionario de datos para automatizar la creación de la interfaz
-estaciones = {
-    "18. ROUTINE": {"desc": "Nexo Inteligente: Captura rápida y rituales operativos.", "link": "https://productivity.directory/routine"},
-    "19. NOTEPLAN": {"desc": "Bitácora de Ingeniería: Notas diarias en Markdown y tareas.", "link": "https://productivity.directory/noteplan"},
-    "20. TASKWARRIOR": {"desc": "Núcleo de Terminal: Gestión CLI para entornos Android/Termux.", "link": "https://productivity.directory/taskwarrior"},
-    "21. JIRA": {"desc": "Ingeniería Pesada: Gestión ágil de sprints y tickets de desarrollo.", "link": "https://productivity.directory/jira"},
-    "22. MS PROJECT": {"desc": "Planificación Estructural: Ruta crítica y presupuestos corporativos.", "link": "https://productivity.directory/microsoft-project"},
-    "23. PROOFHUB": {"desc": "Centro de Aprobación: Revisión visual y auditoría de documentos.", "link": "https://productivity.directory/proofhub"},
-    "24. GANTTPRO": {"desc": "Refinería de Cronogramas: Planificación visual de dependencias.", "link": "https://productivity.directory/ganttpro"},
-    "25. NTASK": {"desc": "Nexo Multi-Dimensional: Control de riesgos, tiempos y reuniones.", "link": "https://productivity.directory/ntask"},
-    "26. FUSEBASE": {"desc": "Portal de Transparencia: Marca blanca para inversores y socios.", "link": "https://productivity.directory/fusebase"},
-    "27. PAYMO": {"desc": "Central de Rentabilidad: Facturación y auditoría de eficiencia.", "link": "https://productivity.directory/paymo"},
-    "28. HUBSTAFF": {"desc": "Radar de Despliegue: Monitoreo por GPS y productividad en tiempo real.", "link": "https://productivity.directory/hubstaff"},
-    "29. LINEAR": {"desc": "Acelerador de Sprints: Gestión de issues a velocidad supersónica.", "link": "https://productivity.directory/linear"},
-    "30. SMARTSHEET": {"desc": "Tablero Maestro: Automatización lógica de flujos empresariales.", "link": "https://productivity.directory/smartsheet"},
-    "31. WRIKE": {"desc": "Sincronizador Transversal: Unificación de departamentos en un solo flujo.", "link": "https://productivity.directory/wrike"},
-    "32. BASECAMP": {"desc": "Búnker de Comunicación: Colaboración centralizada libre de ruido.", "link": "https://productivity.directory/basecamp"}
-}
-
-# Generación automática de los expanders (el "asado")
-for nombre, info in estaciones.items():
-    with st.expander(f"🔹 {nombre}"):
-        st.write(info["desc"])
-        st.markdown(f"[🔗 Acceder a la Estación]({info['link']})")
-
-# Pie de página con Sentencia del Asistente
 st.divider()
-st.caption("Fuerza y Honor. Operación activa y normal bajo supervisión del Centinela.")
+
+# 2. MATRIZ DE PLANES Y RUTAS DE ASCENSO AUTOMÁTICO
+st.header("📋 OFERTA DE PLANES Y ESCALABILIDAD")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.info("### PLAN FREE")
+    st.write("**Estatus:** Patrocinado")
+    st.markdown("- 📈 **A PRO:** 200 Referidos")
+    st.markdown("- 💎 **A PLATINO:** 50 Anuncios ($5 c/u)")
+    st.caption("Denominación: ACCESO FREE")
+
+with col2:
+    st.success("### PLAN PRO")
+    st.write("**Costo:** $200 (6m) / $100 (Anual)")
+    st.markdown("- 🛡️ **Estatus:** Registro Federal")
+    st.markdown("- 💎 **A PLATINO:** Afiliación al Club")
+    st.caption("Denominación: REGISTRO PRO")
+
+with col3:
+    st.warning("### PLAN PLATINO")
+    st.write("**Inversión Mínima:** $400,000")
+    st.markdown("- 🏦 **Nivel:** Wall Street Direct")
+    st.markdown("- ⭐ **Jerarquía:** Máxima Soberanía")
+    st.caption("Denominación: MANDO PLATINO")
+
+st.divider()
+
+# 3. REGISTRO DE PERFIL (MÓDULO DE ACCIÓN)
+st.header("👤 REGISTRO DE PERFIL")
+form_html = """
+<div style="background-color: #0d1117; padding: 20px; border-radius: 10px; border: 1px solid #30363d; color: white;">
+    <form action="https://formspree.io/f/mvzlvnyn" method="POST">
+        <label>NOMBRE COMPLETO:</label><br>
+        <input type="text" name="name" style="width: 100%; padding: 10px; margin: 10px 0; background: #161b22; color: white; border: 1px solid #30363d;" required><br>
+        <label>ID / PASAPORTE:</label><br>
+        <input type="text" name="id" style="width: 100%; padding: 10px; margin: 10px 0; background: #161b22; color: white; border: 1px solid #30363d;" required><br>
+        <input type="hidden" name="_subject" value="NUEVO REGISTRO FEDERAL - PHELPS TUCKER GROUP">
+        <button type="submit" style="width: 100%; padding: 15px; background-color: #238636; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            ACTIVAR PERFIL FEDERAL
+        </button>
+    </form>
+</div>
+"""
+st.components.v1.html(form_html, height=350)
+
+st.divider()
+
+# 4. NODOS DE INTELIGENCIA (ENLACES DE MANDO)
+st.header("🌐 DIRECTORIO DE POTENCIA (ENLACES DE MANDO)")
+
+enlaces = [
+    {"página": "Bóveda de Red & Anuncios", "desc": "Sistema de monetización y gestión de tráfico para anunciantes ($5/anuncio).", "url": "https://www.profitablecpmratenetwork.com/qnhh1xucd?key=6a064f4f3516c4a968449ff9774f2d05"},
+    {"página": "Chat de Desarrollo V0", "desc": "Canal técnico para ajustes de arquitectura y diseño en tiempo real.", "url": "https://v0.app/chat/v0-terminal-x-911-tao-hbr75to2yWl"},
+    {"página": "Registro Federal Miami", "desc": "Portal de validación oficial para socios bajo estándares FCC.", "url": "https://formspree.io/f/mvzlvnyn"},
+    {"página": "Repositorio Código Fuente", "desc": "Almacén maestro de seguridad y respaldo de datos en GitHub.", "url": "https://github.com/fccinternationalus/TerminalX"},
+    {"página": "Terminal X - IA Central", "desc": "Núcleo neural de inteligencia artificial y despliegue gráfico.", "url": "https://v0-ia-creation-system.vercel.app/"}
+]
+
+for e in enlaces:
+    with st.expander(f"🔹 {e['página']}"):
+        st.write(f"**Propósito:** {e['desc']}")
+        st.link_button(f"Sincronizar con {e['página']}", e['url'])
+
+st.divider()
+st.caption("Fuerza y Honor. Operación Miami 33166 | Registro FRN-0038392759")
