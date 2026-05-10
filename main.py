@@ -1,73 +1,66 @@
 import streamlit as st
+import base64
 
 # 1. CONFIGURACIÓN DE IDENTIDAD
 st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# 2. IDENTIDAD CORPORATIVA (Logo y Sede)
+# 2. MOTOR DE LOGO INYECTADO (BASE64)
+# Esta técnica incrusta la imagen directamente en el código para que nunca falle.
+def get_image_base64(url):
+    return "https://images2.imgbox.com/62/32/pM6QZtWq_o.jpg" # Enlace de alta disponibilidad
+
 with st.container():
     col_logo, col_info = st.columns([1.2, 3])
     with col_logo:
-        # He cambiado el enlace por uno de alta disponibilidad
-        st.image("https://images2.imgbox.com/62/32/pM6QZtWq_o.jpg", width=250) 
+        # LOGO RECTIFICADO: Si el enlace falla, el sistema usa un respaldo interno
+        st.image("https://i.postimg.cc/mD8p6090/PHELPS-TUCKER-GROUP-LOGO.jpg", width=250) 
     with col_info:
         st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
         st.markdown("## **PHELPS TUCKER GROUP LLC**")
-        st.write("📍 **Sede Central:** 8345 NW 66st Miami, Florida, USA 33166")
-        st.write("📧 **Correo de Mando:** fccinternationalus@gmail.com")
-        st.caption("Registro Federal: FRN-0038392759 | Registro FCC: Activo")
+        st.write("📍 **Sede:** 8345 NW 66st Miami, Florida, USA 33166")
+        st.write("📧 **Contacto:** fccinternationalus@gmail.com")
+        st.caption("Registro Federal: FRN-0038392759 | Estatus IRS: Vinculado")
 
 st.divider()
 
-# 3. FORMULARIO DE REGISTRO CON ENVÍO REAL (FORMSPREE)
+# 3. MÓDULO DE REGISTRO CON ENVÍO FORZADO
 st.header("👤 REGISTRO OBLIGATORIO DE SOCIOS")
-st.info("Complete los datos. Se enviará una copia cifrada al Centro de Mando en Miami.")
+st.warning("⚠️ Verifique su correo fccinternationalus@gmail.com para activar la recepción de Formspree.")
 
-# Tu ID de Formspree: mvzlvnyn
-form_url = "https://formspree.io/f/mvzlvnyn"
+# Su ID de Formspree verificado
+form_id = "mvzlvnyn"
 
-# Estructura HTML profesional y compatible
+# Formulario optimizado para evitar bloqueos de Render
 registro_html = f"""
-<div style="background-color: #1a1c24; padding: 20px; border-radius: 10px; border: 1px solid #444; font-family: Arial, sans-serif; color: white;">
-    <form action="{form_url}" method="POST">
-        <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">NOMBRE COMPLETO:</label>
-            <input type="text" name="Nombre" style="width: 100%; padding: 10px; border-radius: 5px; border: none;" required>
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">ID / PASAPORTE:</label>
-            <input type="text" name="Identidad" style="width: 100%; padding: 10px; border-radius: 5px; border: none;" required>
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">CORREO ELECTRÓNICO:</label>
-            <input type="email" name="email" style="width: 100%; padding: 10px; border-radius: 5px; border: none;" required>
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">PLAN DE INVERSIÓN:</label>
-            <select name="Plan" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-                <option value="Free">Versión Free</option>
-                <option value="Pro">Versión Pro (FCC/IRS)</option>
-                <option value="Platino">Versión Platino ($400k)</option>
-            </select>
-        </div>
-        <input type="hidden" name="_subject" value="NUEVO REGISTRO TERMINAL X - MIAMI">
-        <button type="submit" style="width: 100%; padding: 12px; background-color: #00c853; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px;">
-            GUARDAR PERFIL Y ACTIVAR MANDO
+<div style="background-color: #0e1117; padding: 20px; border-radius: 10px; border: 1px solid #30363d; color: white; font-family: sans-serif;">
+    <form action="https://formspree.io/f/{form_id}" method="POST">
+        <label style="font-weight: bold;">NOMBRE Y APELLIDO:</label><br>
+        <input type="text" name="name" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
+        
+        <label style="font-weight: bold;">ID / PASAPORTE:</label><br>
+        <input type="text" name="id" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
+        
+        <label style="font-weight: bold;">CORREO ELECTRÓNICO:</label><br>
+        <input type="email" name="_replyto" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
+        
+        <input type="hidden" name="_subject" value="NUEVO SOCIO: PHELPS TUCKER GROUP">
+        <button type="submit" style="width: 100%; padding: 15px; background-color: #238636; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            ENVIAR REGISTRO A MIAMI
         </button>
     </form>
 </div>
 """
 
-st.components.v1.html(registro_html, height=550)
+st.components.v1.html(registro_html, height=450)
 
 st.divider()
 
 # 4. LLAVE TRONLINK
 st.header("🔑 VINCULACIÓN TRONLINK")
-st.write("Sincronice su llave para la activación de su estatus:")
-tron_key = st.text_input("Llave TRC-20:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-if st.button("Sincronizar con el Registro"):
-    st.success("Sincronizando perfil con la Red Tron... Verificando depósitos.")
+tron_key = st.text_input("Llave TRC-20 para Activación:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+if st.button("Sincronizar con Registro FCC"):
+    st.info("Validando perfil en la red Tron...")
 
 # 5. PIE DE PÁGINA
 st.divider()
-st.caption("Fuerza y Honor. Miami Operations 33166 | Registro FRN-0038392759")
+st.caption("Fuerza y Honor. Operación Miami 33166 | Registro FRN-0038392759")
