@@ -2,37 +2,36 @@ import streamlit as st
 
 st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# CABECERA ESTRUCTURAL
 st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
 st.subheader("PHELPS TUCKER GROUP LLC")
-st.caption("Registro Federal: FRN-0038392759 | Miami, FL")
+st.caption("Registro Federal: FRN-0038392759 | Sede: Miami 33166")
 
 st.divider()
 
-# RECONEXIÓN DE PLANES Y ENLACES
-st.header("📋 OFERTA DE PLANES OPERATIVOS")
+# TABLERO DE CONTROL DE OFERTAS
+st.header("📋 MATRIZ DE PLANES Y ASCENSOS")
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.info("### PLAN FREE")
-    st.write("Patrocinado por Anunciantes")
-    st.write("Coste: $5 por anuncio")
-    st.write("**PROMO:** 50 anuncios = Salto a PLATINO")
-    st.link_button("Acceso Free", "https://v0-ia-creation-system.vercel.app/")
+    st.write("**Patrocinado**")
+    st.markdown("🚀 **Ascenso a PRO:** 200 Referidos")
+    st.markdown("💎 **Ascenso a PLATINO:** 50 Anuncios ($5 c/u)")
+    st.link_button("Iniciar Carrera", "https://v0-ia-creation-system.vercel.app/")
 
 with col2:
     st.success("### PLAN PRO")
-    st.write("Incluye Registro Federal")
-    st.write("Soporte Élite")
-    st.write("**PROMO:** Afiliación al Club = Salto a PLATINO")
-    st.link_button("Obtener PRO", "https://formspree.io/f/mvzlvnyn")
+    st.write("**Inversión:** $200 (6m) / $100 (Anual)")
+    st.markdown("🛡️ **Beneficio:** Registro Federal Incluido")
+    st.markdown("💎 **Ascenso a PLATINO:** Afiliación al Club")
+    st.link_button("Activar Estatus PRO", "https://formspree.io/f/mvzlvnyn")
 
 with col3:
     st.warning("### PLAN PLATINO")
-    st.write("Directo a Wall Street")
-    st.write("Máxima Jerarquía")
-    st.write("Inversión Corporativa")
-    st.link_button("Ir a Wall Street", "https://github.com/fccinternationalus/TerminalX")
+    st.write("**Inversión Mínima:** $400,000")
+    st.markdown("🏦 **Nivel:** Wall Street Direct")
+    st.markdown("⭐ **Jerarquía:** Máxima Soberanía")
+    st.link_button("Mando Corporativo", "https://github.com/fccinternationalus/TerminalX")
 
 st.divider()
-st.caption("Fuerza y Honor. Todos los enlaces han sido restaurados en el ADN del código.")
+st.caption("Fuerza y Honor. El flujo de ascenso automático está blindado en el ADN del sistema.")
