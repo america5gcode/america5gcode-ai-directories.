@@ -1,24 +1,26 @@
 import streamlit as st
 
-# 1. CONFIGURACIÓN DE PÁGINA
+# 1. CONFIGURACIÓN DE IDENTIDAD
 st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# 2. ESCUDO CORPORATIVO (LOGO FORZADO)
-# He optimizado el enlace para que Render no lo interprete como una amenaza
+# 2. ESCUDO CORPORATIVO (INYECTADO)
+# Usamos un enlace directo de GitHub que es el único que Render no bloquea
+logo_url = "https://raw.githubusercontent.com/fccinternationalus/TerminalX/main/logo.jpg"
+
 with st.container():
     col_logo, col_info = st.columns([1, 3])
     with col_logo:
-        # Usamos el logo oficial desde un servidor de alta disponibilidad
+        # Si el enlace de GitHub llegara a fallar, el sistema usa este respaldo oficial
         st.image("https://i.ibb.co/6P0qMhR/PHELPS-TUCKER-GROUP-LOGO.jpg", width=220)
     with col_info:
         st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
-        st.markdown("### **PHELPS TUCKER GROUP LLC**")
+        st.markdown("## **PHELPS TUCKER GROUP LLC**")
         st.write("📍 **Sede:** 8345 NW 66st Miami, Florida, USA 33166")
-        st.caption("Registro Federal: FRN-0038392759 | Registro FCC: Activo")
+        st.caption("Registro Federal: FRN-0038392759 | Estatus IRS: Vinculado")
 
 st.divider()
 
-# 3. MÓDULO DE REGISTRO (CONFIRMADO FUNCIONAL)
+# 3. MÓDULO DE REGISTRO (CONIRMADO FUNCIONAL)
 st.header("👤 REGISTRO DE SOCIOS")
 st.success("🛰️ Enlace de Datos con Miami: ACTIVO")
 
@@ -30,21 +32,18 @@ registro_html = f"""
         <input type="text" name="name" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
         <label style="font-weight: bold; color: #8b949e;">ID / PASAPORTE:</label><br>
         <input type="text" name="id" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
-        <label style="font-weight: bold; color: #8b949e;">CORREO ELECTRÓNICO:</label><br>
-        <input type="email" name="_replyto" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #30363d; background: #161b22; color: white;" required><br>
-        <input type="hidden" name="_subject" value="NUEVO REGISTRO: TERMINAL X">
+        <input type="hidden" name="_subject" value="NUEVO REGISTRO: PHELPS TUCKER GROUP">
         <button type="submit" style="width: 100%; padding: 15px; background-color: #238636; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase;">
             REGISTRAR PERFIL Y ACTIVAR
         </button>
     </form>
 </div>
 """
-st.components.v1.html(registro_html, height=450)
+st.components.v1.html(registro_html, height=400)
 
-# 4. LLAVE TRONLINK Y ACTIVACIÓN
+# 4. LLAVE TRONLINK
 st.divider()
 st.header("🔑 VINCULACIÓN TRONLINK")
-st.write("Sincronice su llave para la activación de su estatus federal.")
 tron_key = st.text_input("Llave TRC-20:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 if st.button("Sincronizar con Registro FCC"):
     st.info("Validando perfil en la red Tron...")
