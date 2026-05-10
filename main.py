@@ -1,84 +1,88 @@
 import streamlit as st
 
-# 1. CONFIGURACIÓN DE PÁGINA (Estilo Rascacielos)
+# 1. CONFIGURACIÓN DE PÁGINA
 st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# 2. IDENTIDAD CORPORATIVA DE ALTO NIVEL
+# 2. IDENTIDAD CORPORATIVA
 with st.container():
     col_logo, col_info = st.columns([1.2, 3])
     with col_logo:
-        # Usando el escudo oficial de Phelps Tucker Group
+        # Logo oficial restaurado
         st.image("https://i.ibb.co/6P0qMhR/PHELPS-TUCKER-GROUP-LOGO.jpg", width=250) 
     with col_info:
         st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
         st.markdown("## **PHELPS TUCKER GROUP LLC**")
-        st.write("📍 **Sede Principal:** 8345 NW 66st Miami, Florida, USA 33166")
-        st.write("📧 **Contacto FCC:** fccinternationalus@gmail.com")
-        st.caption("Registro Federal: FRN-0038392759 | Registro FCC: Activo | Estatus IRS: Vinculado")
+        st.write("📍 **Sede:** 8345 NW 66st Miami, Florida, USA 33166")
+        st.write("📧 **Contacto:** fccinternationalus@gmail.com")
+        st.caption("Registro Federal: FRN-0038392759 | Registro FCC Activo")
 
-# 3. PLANOS DE MANDO Y ACCESO FINANCIERO
+# 3. MÓDULO DE REGISTRO DE PERFIL (OBLIGATORIO)
 st.divider()
-st.header("💎 MODELO DE ASCENSO E INVERSIÓN")
+st.header("👤 REGISTRO DE PERFIL DE USUARIO (REQUISITO OBLIGATORIO)")
+st.info("Este registro es indispensable para la vinculación con el IRS, la FCC y la red Tron.")
 
+with st.form("registro_usuario"):
+    col_a, col_b = st.columns(2)
+    with col_a:
+        nombre_completo = st.text_input("Nombre y Apellidos Reales:")
+        documento_id = st.text_input("Documento de Identidad (ID/Pasaporte):")
+        pais_residencia = st.text_input("País de Residencia:")
+    with col_b:
+        correo_personal = st.text_input("Correo Electrónico de Contacto:")
+        profesion_oficio = st.text_input("Profesión / Cargo:")
+        nivel_interes = st.selectbox("Nivel de Interés:", ["Free", "Pro (FCC)", "Platino (Inversionista)"])
+    
+    confirmacion = st.checkbox("Certifico que los datos proporcionados son veraces para fines legales y fiscales.")
+    
+    submit_registro = st.form_submit_with_button("Guardar Perfil y Generar Credencial")
+
+if submit_registro:
+    if confirmacion and nombre_completo and correo_personal:
+        st.success(f"✅ Perfil de {nombre_completo} registrado exitosamente. Procesando credencial para el Registro Federal.")
+    else:
+        st.error("⚠️ Error: Todos los campos son obligatorios y debe certificar la veracidad de los datos.")
+
+# 4. PLANOS DE MANDO Y ACCESO
+st.divider()
+st.header("💎 MODELO DE ASCENSO E INVERSIONES")
 col_f, col_p, col_pl = st.columns(3)
 
 with col_f:
     st.markdown("### 🆓 VERSIÓN FREE")
-    st.write("Exploración total patrocinada por anuncios.")
     st.metric("Costo AD", "$5.00")
-    st.success("🎯 REGLA: 50 Ads = Ascenso a PLATINO")
+    st.success("🎯 50 Ads = Ascenso a PLATINO")
 
 with col_p:
     st.markdown("### 🚀 VERSIÓN PRO (FCC)")
-    st.write("**Comercialización Directa (IRS/FCC)**")
-    st.info("• 6 Meses: $200.00\n\n• 1 Año: $100.00")
-    st.warning("⚡ Afiliación Phelps Tucker = Estatus PLATINO")
+    st.markdown("**6 Meses: $200 | 1 Año: $100**")
+    st.warning("⚡ Afiliación Phelps Tucker = PLATINO")
 
 with col_pl:
     st.markdown("### 👑 VERSIÓN PLATINO")
-    st.write("**Inversionistas Directos - Wall Street**")
-    st.error("⚠️ Inversión Mínima: $400,400.00 ($400k)")
-    st.write("Acceso a dividendos por ejecución operativa.")
+    st.error("⚠️ Inversión Mínima: $400,400.00")
+    st.write("Acceso directo a Wall Street.")
 
-# 4. LLAVE TRONLINK: ACTIVACIÓN AUTOMÁTICA
+# 5. ACTIVACIÓN VÍA TRONLINK (VINCULADA AL PERFIL)
 st.divider()
-st.header("🔑 ACTIVACIÓN VÍA TRONLINK")
-st.write("Ingrese la llave de su billetera o link de afiliado para sincronizar su nivel:")
+st.header("🔑 LLAVE DE ACTIVACIÓN (TRONLINK)")
+st.write("Ingrese la llave de su link para validar el registro y activar su estatus:")
+tron_key = st.text_input("Llave TRC-20:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
-tron_input = st.text_input("Llave TRC-20 / Link de Afiliación:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-if st.button("Sincronizar con el Imperio"):
-    if tron_input:
-        st.success(f"Sincronizando con la Red Tron... Llave {tron_input} validada bajo FCC.")
+if st.button("Sincronizar Perfil y Activar"):
+    if tron_key:
+        st.success("Sincronizando identidad con la Red Tron... Activación en proceso.")
     else:
-        st.error("Se requiere la llave del link para la activación.")
+        st.error("Debe registrar su perfil antes de activar la llave.")
 
-# 5. DIRECTORIO ALFABÉTICO DE ESTACIONES (Restaurado según Captura)
+# 6. DIRECTORIO DE ESTACIONES
 st.divider()
 st.header("🛰️ DIRECTORIO DE ESTACIONES")
+estaciones = ["Basecamp", "FuseBase", "GanttPRO", "Hubstaff", "Jira", "Linear", "MS Project", "NotePlan", "nTask", "Paymo", "ProofHub", "Routine", "Smartsheet", "Taskwarrior", "Wrike"]
+for est in sorted(estaciones):
+    with st.expander(f"🔹 {est.upper()}"):
+        st.write(f"Acceso operativo a la estación {est}.")
+        st.markdown(f"[🔗 Abrir Portal](https://productivity.directory/{est.lower()})")
 
-estaciones = {
-    "BASECAMP": "Búnker de comunicación integral y gestión de mando.",
-    "FUSEBASE": "Portal de transparencia para socios e inversores.",
-    "GANTTPRO": "Visualización de ruta crítica y cronogramas.",
-    "HUBSTAFF": "Radar de despliegue y monitoreo GPS.",
-    "JIRA": "Gestión de software y sprints complejos.",
-    "LINEAR": "Acelerador de ejecución técnica.",
-    "MS PROJECT": "Planificación estructural y presupuestos.",
-    "NOTEPLAN": "Bitácora de ingeniería y notas Markdown.",
-    "NTASK": "Nexo de riesgos y minutas de mando.",
-    "PAYMO": "Rentabilidad y auditoría fiscal.",
-    "PROOFHUB": "Control de calidad y aprobación visual.",
-    "ROUTINE": "Nexo inteligente para captura rápida de rituales.",
-    "SMARTSHEET": "Automatización de flujos lógicos.",
-    "TASKWARRIOR": "Núcleo de terminal CLI para Android.",
-    "WRIKE": "Sincronizador transversal de departamentos."
-}
-
-for nombre in sorted(estaciones.keys()):
-    with st.expander(f"🔹 {nombre}"):
-        st.write(estaciones[nombre])
-        st.markdown(f"[🔗 Abrir Portal de {nombre}](https://productivity.directory/{nombre.lower()})")
-
-# 6. PIE DE PÁGINA CORPORATIVO
+# 7. PIE DE PÁGINA
 st.divider()
-st.caption("Fuerza y Honor. Miami Operations 33166 | Phelps Tucker Group | Registro FRN-0038392759")
+st.caption("Fuerza y Honor. Miami Operations | Registro FRN-0038392759")
