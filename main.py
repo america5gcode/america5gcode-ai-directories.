@@ -1,76 +1,47 @@
 import streamlit as st
 
-# Título y Registro en la cabecera
-st.title("🏗️ Rascacielos Gráfico - Terminal X")
-st.markdown("### Registro Federal: FRN-0038392759")
+# --- PÁGINA 1620: MODELO DE NEGOCIO Y CONVERSIÓN ---
+st.header("💎 MODELO DE ASCENSO: TERMINAL X")
+st.markdown(f"**Registro Federal:** FRN-0038392759 | **Estatus IRS:** Vinculado")
 
-# --- BLOQUE CONFIRMADO EN LA PRUEBA ---
-with st.expander("⚡ ROUTINE: El Nexo Inteligente de Ejecución"):
-    st.write("Centro de operaciones para captura rápida de ideas y organización automática de rituales diarios.")
-    st.markdown("[🔗 Abrir Routine](https://productivity.directory/routine)")
-
-with st.expander("📝 NOTEPLAN: La Bitácora de Ingeniería"):
-    st.write("Unión de notas diarias, tareas y calendario en Markdown. Memoria técnica del proyecto.")
-    st.markdown("[🔗 Abrir NotePlan](https://productivity.directory/noteplan)")
-
-with st.expander("💻 TASKWARRIOR: El Núcleo de la Terminal"):
-    st.write("Gestión de tareas pura desde CLI. Máxima potencia para entornos Android/Termux.")
-    st.markdown("[🔗 Abrir Taskwarrior](https://productivity.directory/taskwarrior)")
-
-# --- SIGUIENTE BLOQUE PARA INTEGRAR ---
-with st.expander("⚙️ JIRA: La Sala de Ingeniería Pesada"):
-    st.write("Estándar industrial para desarrollo ágil, gestión de bugs y sprints técnicos.")
-    st.markdown("[🔗 Abrir Jira](https://productivity.directory/jira)")
-
-with st.expander("🏢 MS PROJECT: Central de Planificación Estructural"):
-    st.write("Cálculo de camino crítico y gestión de presupuestos de alta fidelidad.")
-    st.markdown("[🔗 Abrir MS Project](https://productivity.directory/microsoft-project)")
-    import streamlit as st
-
-# --- PÁGINA 1620: IDENTIDAD OPERATIVA ---
-st.markdown("## 📟 PÁGINA 1620: MANIFIESTO DE PODER")
-st.divider()
-
-# SECCIÓN 1: ¿QUIÉNES SOMOS? (La Esencia)
+# 1. EL MOTOR DE CONVERSIÓN FREE -> PLATINO
 with st.container():
-    col1, col2 = st.columns([1, 2])
+    st.subheader("🆓 VERSIÓN FREE (Patrocinada)")
+    st.write("""
+    Navegación y exploración ilimitada. El usuario es patrocinado por anunciantes.
+    """)
+    
+    col1, col2 = st.columns(2)
     with col1:
-        st.subheader("🛠️ Somos lo que hacemos")
+        st.metric(label="Costo por Anuncio (AD)", value="$5.00")
     with col2:
-        st.write("""
-        Somos arquitectos de soluciones móviles de alta complejidad. 
-        Operamos desde el núcleo del sistema (**Android/Termux**), transformando 
-        líneas de código en activos estratégicos. Nuestra identidad es la **Ejecución Pura**: 
-        si no se puede medir, rastrear y automatizar, no existe en nuestro imperio.
-        """)
-
-# SECCIÓN 2: NUESTRAS OFERTAS (El Valor del Rascacielos)
-st.markdown("### 💼 Portafolio de Soluciones Estratégicas")
-
-tab1, tab2, tab3 = st.tabs(["🚀 Terminal X", "📊 Inteligencia CRM", "🏗️ Infraestructura"])
-
-with tab1:
-    st.markdown("""
-    **Red Social de Prospección Avanzada**
-    * Automatización de investigación de mercado.
-    * Calificación de leads mediante IA propietaria.
-    * Despliegue en entornos de alta disponibilidad.
-    """)
-
-with tab2:
-    st.markdown("""
-    **Sincronización Transversal (Zoho/HubSpot)**
-    * Migración de bases de datos desde GitHub/Termux.
-    * Limpieza y enriquecimiento de lead data.
-    * Auditoría de métricas bajo registro federal.
-    """)
-
-with tab3:
-    st.markdown("""
-    **Gestión de Capital e Infraestructura**
-    * Administración de inversión de grado corporativo ($200k+).
-    * Planificación de ruta crítica y mitigación de riesgos.
-    * Reportes de transparencia para socios estratégicos.
-    """)
+        st.metric(label="Umbral de Ascenso", value="50 Anuncios")
+        
+    st.success("🎯 **Conversión Automática:** Al alcanzar los 50 anuncios, el usuario asciende directamente al nivel **PLATINO**.")
 
 st.divider()
+
+# 2. EL PODER DE LA VERSIÓN PRO (Exclusión del Registro FSCC)
+with st.container():
+    st.subheader("🚀 VERSIÓN PRO (Comercialización Directa)")
+    st.info("Punto clave: Exclusión del registro FSCC de Marketing Digital.")
+    st.write("""
+    Esta versión está diseñada para quienes desean comercializar sin las trabas del registro FSCC. 
+    Al estar vinculada directamente con el **IRS**, permite una gestión de ingresos profesional.
+    """)
+    
+    st.warning("⚠️ **AFILIACIÓN AL GRUPO FIRST:** Al inscribirse en Pro, el usuario recibe automáticamente los estándares del Nivel Platino.")
+
+st.divider()
+
+# 3. EL NIVEL PLATINO (Wall Street & Inversión Directa)
+with st.container():
+    st.subheader("👑 VERSIÓN PLATINO (Inversionistas)")
+    st.write("""
+    **Destino final: Wall Street.** Los usuarios Platino son inversionistas directos.
+    Sus ganancias están ligadas al desempeño operativo de la Red Social Terminal X.
+    """)
+    st.markdown("""
+    * **Beneficio:** Reciben dividendos directos según la ejecución del proyecto.
+    * **Alcance:** Máxima visibilidad en los mercados financieros globales.
+    """)
