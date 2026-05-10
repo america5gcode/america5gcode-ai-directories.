@@ -1,84 +1,84 @@
 import streamlit as st
 
-# 1. CONFIGURACIÓN DE PÁGINA
-st.set_page_config(page_title="Terminal X - Mando Central", layout="wide")
+# 1. CONFIGURACIÓN DE PÁGINA (Estilo Rascacielos)
+st.set_page_config(page_title="Terminal X - Mando Miami", layout="wide")
 
-# 2. CABECERA E IDENTIDAD DE MANDO
-st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
-st.subheader("Registro Federal: FRN-0038392759")
-st.info("Estatus IRS: Vinculado | Registro de Comercio: FCC | Red: TRON (TRC-20)")
-
-# 3. ESTRUCTURA DE PLANES E INVERSIÓN
-st.divider()
-st.header("💎 PLANOS DE MANDO Y ACCESO")
-
-col_free, col_pro, col_plat = st.columns(3)
-
-with col_free:
-    st.markdown("### 🆓 VERSIÓN FREE")
-    st.write("Navegación patrocinada por anunciantes.")
-    st.metric("Costo por Anuncio", "$5.00")
-    st.success("🎯 50 Anuncios = Ascenso Automático a PLATINO")
-
-with col_pro:
-    st.markdown("### 🚀 VERSIÓN PRO (FCC)")
-    st.write("Comercialización directa vinculada al IRS.")
-    st.markdown("""
-    **Suscripción de Poder:**
-    * **6 Meses:** $200.00
-    * **1 Año:** $100.00 (Oferta de Lanzamiento)
-    """)
-    st.warning("⚡ Afiliación PHELPS TUCKER GROUP = Estatus PLATINO")
-
-with col_plat:
-    st.markdown("### 👑 VERSIÓN PLATINO")
-    st.write("**Inversionistas Directos - Wall Street.**")
-    st.error("⚠️ Inversión Mínima: $400,400.00 ($400k)")
-    st.write("Ganancias directas según ejecución operativa.")
-
-# 4. LLAVE DE ACTIVACIÓN (TRONLINK)
-st.divider()
-st.header("🔑 LLAVE DE ACTIVACIÓN AUTOMÁTICA")
-st.write("Utilice el código de su billetera TronLink para vincular el link de afiliación y activar su nivel:")
-
+# 2. IDENTIDAD CORPORATIVA DE ALTO NIVEL
 with st.container():
-    # Espacio para el enlace/billetera de TronLink
-    tron_wallet = st.text_input("Introduzca su Billetera TronLink / Link de Afiliado:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-    
-    if st.button("Validar Llave y Activar"):
-        if tron_wallet:
-            st.success(f"Procesando vinculación para la llave: {tron_wallet}. Verificando estatus en la red Tron...")
-        else:
-            st.error("Por favor, ingrese la llave del link de TronLink para proceder.")
+    col_logo, col_info = st.columns([1.2, 3])
+    with col_logo:
+        # Usando el escudo oficial de Phelps Tucker Group
+        st.image("https://i.ibb.co/6P0qMhR/PHELPS-TUCKER-GROUP-LOGO.jpg", width=250) 
+    with col_info:
+        st.title("🏗️ TERMINAL X: RASCACIELOS GRÁFICO")
+        st.markdown("## **PHELPS TUCKER GROUP LLC**")
+        st.write("📍 **Sede Principal:** 8345 NW 66st Miami, Florida, USA 33166")
+        st.write("📧 **Contacto FCC:** fccinternationalus@gmail.com")
+        st.caption("Registro Federal: FRN-0038392759 | Registro FCC: Activo | Estatus IRS: Vinculado")
 
-    st.info("💡 Al usar la llave de TronLink, el sistema valida automáticamente el depósito y actualiza su estatus a Pro o Platino sin intervención manual.")
-
-# 5. DIRECTORIO DE ESTACIONES (Restaurado)
+# 3. PLANOS DE MANDO Y ACCESO FINANCIERO
 st.divider()
-st.header("🛰️ DIRECTORIO DE ESTACIONES OPERATIVAS")
+st.header("💎 MODELO DE ASCENSO E INVERSIÓN")
+
+col_f, col_p, col_pl = st.columns(3)
+
+with col_f:
+    st.markdown("### 🆓 VERSIÓN FREE")
+    st.write("Exploración total patrocinada por anuncios.")
+    st.metric("Costo AD", "$5.00")
+    st.success("🎯 REGLA: 50 Ads = Ascenso a PLATINO")
+
+with col_p:
+    st.markdown("### 🚀 VERSIÓN PRO (FCC)")
+    st.write("**Comercialización Directa (IRS/FCC)**")
+    st.info("• 6 Meses: $200.00\n\n• 1 Año: $100.00")
+    st.warning("⚡ Afiliación Phelps Tucker = Estatus PLATINO")
+
+with col_pl:
+    st.markdown("### 👑 VERSIÓN PLATINO")
+    st.write("**Inversionistas Directos - Wall Street**")
+    st.error("⚠️ Inversión Mínima: $400,400.00 ($400k)")
+    st.write("Acceso a dividendos por ejecución operativa.")
+
+# 4. LLAVE TRONLINK: ACTIVACIÓN AUTOMÁTICA
+st.divider()
+st.header("🔑 ACTIVACIÓN VÍA TRONLINK")
+st.write("Ingrese la llave de su billetera o link de afiliado para sincronizar su nivel:")
+
+tron_input = st.text_input("Llave TRC-20 / Link de Afiliación:", placeholder="Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+if st.button("Sincronizar con el Imperio"):
+    if tron_input:
+        st.success(f"Sincronizando con la Red Tron... Llave {tron_input} validada bajo FCC.")
+    else:
+        st.error("Se requiere la llave del link para la activación.")
+
+# 5. DIRECTORIO ALFABÉTICO DE ESTACIONES (Restaurado según Captura)
+st.divider()
+st.header("🛰️ DIRECTORIO DE ESTACIONES")
+
 estaciones = {
-    "Basecamp": "Gestión de mando y comunicación integral.",
-    "FuseBase": "Portal de transparencia para socios e inversores.",
-    "GanttPRO": "Ruta crítica y cronogramas de ingeniería.",
-    "Hubstaff": "Radar de despliegue y monitoreo GPS.",
-    "Jira": "Gestión de software y sprints complejos.",
-    "Linear": "Acelerador de ejecución técnica.",
-    "MS Project": "Planificación estructural y presupuestos.",
-    "NotePlan": "Bitácora de ingeniería y notas Markdown.",
-    "nTask": "Nexo de riesgos y minutas de mando.",
-    "Paymo": "Rentabilidad y auditoría fiscal.",
-    "ProofHub": "Control de calidad y aprobación visual.",
-    "Routine": "Captura rápida y rituales inteligentes.",
-    "Smartsheet": "Automatización de flujos lógicos.",
-    "Taskwarrior": "Núcleo de terminal CLI para Android.",
-    "Wrike": "Sincronizador transversal de departamentos."
+    "BASECAMP": "Búnker de comunicación integral y gestión de mando.",
+    "FUSEBASE": "Portal de transparencia para socios e inversores.",
+    "GANTTPRO": "Visualización de ruta crítica y cronogramas.",
+    "HUBSTAFF": "Radar de despliegue y monitoreo GPS.",
+    "JIRA": "Gestión de software y sprints complejos.",
+    "LINEAR": "Acelerador de ejecución técnica.",
+    "MS PROJECT": "Planificación estructural y presupuestos.",
+    "NOTEPLAN": "Bitácora de ingeniería y notas Markdown.",
+    "NTASK": "Nexo de riesgos y minutas de mando.",
+    "PAYMO": "Rentabilidad y auditoría fiscal.",
+    "PROOFHUB": "Control de calidad y aprobación visual.",
+    "ROUTINE": "Nexo inteligente para captura rápida de rituales.",
+    "SMARTSHEET": "Automatización de flujos lógicos.",
+    "TASKWARRIOR": "Núcleo de terminal CLI para Android.",
+    "WRIKE": "Sincronizador transversal de departamentos."
 }
 
-for nombre, descripcion in sorted(estaciones.items()):
-    with st.expander(f"🔹 {nombre.upper()}"):
-        st.write(descripcion)
-        st.markdown(f"[🔗 Abrir Portal de {nombre}](https://productivity.directory/{nombre.lower().replace(' ', '-')})")
+for nombre in sorted(estaciones.keys()):
+    with st.expander(f"🔹 {nombre}"):
+        st.write(estaciones[nombre])
+        st.markdown(f"[🔗 Abrir Portal de {nombre}](https://productivity.directory/{nombre.lower()})")
 
-# 6. PIE DE MANDO
+# 6. PIE DE PÁGINA CORPORATIVO
 st.divider()
-st.caption("Fuerza y Honor. Operando bajo Registro Federal 0038392759. El Centinela asegura la transparencia en la red Tron.")
+st.caption("Fuerza y Honor. Miami Operations 33166 | Phelps Tucker Group | Registro FRN-0038392759")
